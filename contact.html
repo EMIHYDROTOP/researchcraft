@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Premium Academic Research Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+    .contact-container {
+      background: #ffffff;
+      width: 100%;
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    }
+    .contact-info {
+      background: linear-gradient(160deg, #1a2980, #26d0ce);
+      color: #fff;
+      padding: 50px;
+    }
+    .contact-info h1 { font-size: 32px; margin-bottom: 20px; }
+    .contact-info p { line-height: 1.7; margin-bottom: 20px; font-size: 15px; }
+    .contact-info ul { list-style: none; }
+    .contact-info ul li { margin-bottom: 14px; font-size: 14px; }
+    .contact-form { padding: 50px; }
+    .contact-form h2 { margin-bottom: 25px; color: #203a43; font-size: 26px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 13px; margin-bottom: 6px; color: #444; }
+    .form-group input, .form-group textarea {
+      width: 100%; padding: 12px 14px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px;
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .contact-btn {
+      margin-top: 10px; width: 100%; padding: 14px;
+      background: linear-gradient(135deg, #1a2980, #26d0ce);
+      border: none; border-radius: 6px; color: #fff; font-size: 15px; font-weight: 600; cursor: pointer;
+    }
+    .contact-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+    @media(max-width: 768px) { .contact-container { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <div class="contact-info">
+      <h1>Contact Us</h1>
+      <p>Have questions about your research work or need clarification before registering? Reach out to us — our academic support team is ready to assist you.</p>
+      <ul>
+        <li><strong>Phone:</strong> +234 814 868 2660</li>
+        <li><strong>Email:</strong> emihydrotopfarms@gmail.com</li>
+        <li><strong>Support:</strong> Monday – Saturday (9am – 7pm)</li>
+        <li><strong>Coverage:</strong> Nigerian Universities & Polytechnics</li>
+      </ul>
+    </div>
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" type="text" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" placeholder="Enter your email address" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Type your message here..." required></textarea>
+        </div>
+        <button type="submit" class="contact-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
