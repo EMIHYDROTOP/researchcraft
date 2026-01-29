@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-  <nav>
-    <h1>ResearchCraft</h1>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="register.html">Register</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Register | Premium Academic Research Agency</title>
+  <title>Contact Us | ResearchCraft Academic Agency</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
-    body{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px}
-    .container{background:#fff;max-width:980px;width:100%;border-radius:14px;box-shadow:0 25px 60px rgba(0,0,0,.25);overflow:hidden;display:grid;grid-template-columns:1fr 1.2fr}
+    body{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);min-height:100vh}
+    header{background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:1000}
+    nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:15px 30px}
+    nav a{text-decoration:none;color:#203a43;font-weight:500;font-size:14px}
+    nav a.active{color:#1a2980;font-weight:600}
+    .container{max-width:950px;margin:60px auto;background:#fff;border-radius:14px;box-shadow:0 25px 60px rgba(0,0,0,.25);display:grid;grid-template-columns:1fr 1.1fr;overflow:hidden}
     .info{background:linear-gradient(160deg,#1a2980,#26d0ce);color:#fff;padding:50px}
     .info h1{font-size:32px;margin-bottom:15px}
     .info p{font-size:15px;line-height:1.7;margin-bottom:20px}
@@ -29,73 +22,67 @@
     .form h2{font-size:26px;margin-bottom:25px;color:#203a43}
     .group{margin-bottom:16px}
     label{font-size:13px;color:#444;margin-bottom:6px;display:block}
-    input,select,textarea{width:100%;padding:12px 14px;border-radius:6px;border:1px solid #ccc;font-size:14px}
-    textarea{resize:vertical;min-height:90px}
-    .payment-box{display:none;background:#f4f8fb;border-left:4px solid #1a2980;padding:12px;margin-top:10px;font-size:13px}
+    input,textarea{width:100%;padding:12px 14px;border-radius:6px;border:1px solid #ccc;font-size:14px}
+    textarea{resize:vertical;min-height:110px}
     .btn{width:100%;padding:14px;margin-top:10px;background:linear-gradient(135deg,#1a2980,#26d0ce);border:none;border-radius:6px;color:#fff;font-size:15px;font-weight:600;cursor:pointer}
     .btn:hover{opacity:.9}
-    .proof{margin-top:15px;text-align:center}
-    .proof a{color:#1a2980;font-weight:600;text-decoration:none}
-    @media(max-width:800px){.container{grid-template-columns:1fr}}
+    @media(max-width:800px){.container{grid-template-columns:1fr;margin:30px}}
   </style>
 </head>
 <body>
+<header>
+  <nav>
+    <div style="font-weight:700;font-size:20px;color:#1a2980">ResearchCraft</div>
+    <div style="display:flex;gap:22px">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="register.html">Register</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+</header>
+
 <div class="container">
   <div class="info">
-    <h1>Premium Academic Research Agency</h1>
-    <p>Register your research topic and academic details. All submissions are structured strictly to Nigerian university standards.</p>
+    <h1>Contact ResearchCraft</h1>
+    <p>Have questions about your research project, pricing, or delivery timelines? Reach out directly and get a fast response.</p>
     <ul>
-      <li>✔ Topic refinement & approval guidance</li>
-      <li>✔ Chapter One & Two writing</li>
-      <li>✔ Plagiarism-free & referenced</li>
-      <li>✔ Fast turnaround time</li>
+      <li>✔ Fast WhatsApp response</li>
+      <li>✔ Academic consultation support</li>
+      <li>✔ Nigerian university standards</li>
+      <li>✔ Confidential & professional</li>
     </ul>
   </div>
 
   <div class="form">
-    <h2>Research Registration Form</h2>
-
+    <h2>Send Us a Message</h2>
     <form onsubmit="sendContactWhatsApp(); return false;">
-  <div class="group">
-    <label>Full Name</label>
-    <input id="cname" required placeholder="Your full name">
+      <div class="group">
+        <label>Full Name</label>
+        <input id="cname" required placeholder="Your full name">
+      </div>
+      <div class="group">
+        <label>Email Address</label>
+        <input id="cemail" type="email" required placeholder="example@email.com">
+      </div>
+      <div class="group">
+        <label>Phone Number</label>
+        <input id="cphone" required placeholder="080xxxxxxxx">
+      </div>
+      <div class="group">
+        <label>Your Message</label>
+        <textarea id="cmessage" required placeholder="Type your message here"></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message via WhatsApp</button>
+    </form>
   </div>
-  <div class="group">
-    <label>Email Address</label>
-    <input id="cemail" type="email" required placeholder="example@email.com">
-  </div>
-  <div class="group">
-    <label>Phone Number</label>
-    <input id="cphone" required placeholder="080xxxxxxxx">
-  </div>
-  <div class="group">
-    <label>Your Message</label>
-    <textarea id="cmessage" required placeholder="Type your message here"></textarea>
-  </div>
-  <button type="submit" class="btn">Send Message</button>
-</form>
+</div>
 
 <script>
 function sendContactWhatsApp(){
   const msg = `CONTACT MESSAGE%0A%0AName: ${cname.value}%0AEmail: ${cemail.value}%0APhone: ${cphone.value}%0A%0AMessage:%0A${cmessage.value}`;
   window.open(`https://wa.me/2348148682660?text=${msg}`, '_blank');
-}
-</script>
-  </div>
-</div>
-
-<script>
-function showPay(){
-  document.getElementById('bank').style.display='none';
-  document.getElementById('crypto').style.display='none';
-  const p=document.getElementById('payment').value;
-  if(p==='bank') document.getElementById('bank').style.display='block';
-  if(p==='crypto') document.getElementById('crypto').style.display='block';
-}
-
-function sendWhatsApp(){
-  const msg=`RESEARCH REGISTRATION%0A%0AFull Name: ${name.value}%0AEmail: ${email.value}%0APhone: ${phone.value}%0AUniversity: ${university.value}%0ADepartment: ${department.value}%0ALevel: ${level.value}%0A%0AResearch Topic:%0A${topic.value}%0A%0AResearch Area: ${area.value}%0A%0AProblem Statement:%0A${problem.value}%0A%0AService Required: ${service.value}%0APayment Method: ${payment.value}`;
-  window.open(`https://wa.me/2348148682660?text=${msg}`,'_blank');
 }
 </script>
 </body>
