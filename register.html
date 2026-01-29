@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-  <nav>
-    <h1>ResearchCraft</h1>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="register.html">Register</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
-
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register | Premium Academic Research Agency</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
-    body{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px}
-    .container{background:#fff;max-width:980px;width:100%;border-radius:14px;box-shadow:0 25px 60px rgba(0,0,0,.25);overflow:hidden;display:grid;grid-template-columns:1fr 1.2fr}
+    body{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);min-height:100vh;padding-top:80px}
+    header{background:#ffffff;box-shadow:0 4px 12px rgba(0,0,0,.08);position:fixed;top:0;width:100%;z-index:1000}
+    nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:15px 30px}
+    nav h1{font-weight:700;font-size:20px;color:#1a2980}
+    nav a{text-decoration:none;color:#203a43;font-weight:500;margin-left:20px}
+    nav a.active{color:#1a2980;font-weight:600}
+
+    .container{background:#fff;max-width:980px;width:100%;border-radius:14px;box-shadow:0 25px 60px rgba(0,0,0,.25);overflow:hidden;display:grid;grid-template-columns:1fr 1.2fr;margin:auto}
     .info{background:linear-gradient(160deg,#1a2980,#26d0ce);color:#fff;padding:50px}
     .info h1{font-size:32px;margin-bottom:15px}
     .info p{font-size:15px;line-height:1.7;margin-bottom:20px}
@@ -37,10 +31,23 @@
     .btn:hover{opacity:.9}
     .proof{margin-top:15px;text-align:center}
     .proof a{color:#1a2980;font-weight:600;text-decoration:none}
-    @media(max-width:800px){.container{grid-template-columns:1fr}}
+    @media(max-width:800px){.container{grid-template-columns:1fr}} 
   </style>
 </head>
 <body>
+<header>
+  <nav>
+    <h1>ResearchCraft</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="register.html" class="active">Register</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
 <div class="container">
   <div class="info">
     <h1>Premium Academic Research Agency</h1>
@@ -55,7 +62,6 @@
 
   <div class="form">
     <h2>Research Registration Form</h2>
-
     <form id="regForm">
       <div class="group"><label>Full Name</label><input id="name" placeholder="Your full name" required></div>
       <div class="group"><label>Email Address</label><input id="email" type="email" placeholder="example@email.com" required></div>
@@ -82,9 +88,10 @@
           <option>Chapter Two – ₦30,000</option>
           <option>Chapters 1 & 2 – ₦50,000</option>
           <option>Full Proposal – ₦70,000</option>
-          <option>Urgent Chapter 1 – ₦35,000</option>
-          <option>Urgent Chapter 2 – ₦40,000</option>
-          <option>Urgent Chapters 1 & 2 – ₦70,000</option>
+          <option>Urgent Chapter 1 Pack – ₦35,000</option>
+          <option>Urgent Chapter 2 Pack – ₦40,000</option>
+          <option>Urgent Chapters 1 & 2 Pack – ₦70,000</option>
+          <option>Urgent Full Proposal Defence Pack – ₦90,000</option>
         </select>
       </div>
 
