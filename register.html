@@ -6,162 +6,116 @@
   <title>Register | Premium Academic Research Agency</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
-    body {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-    }
-    .register-container {
-      background: #ffffff;
-      width: 100%;
-      max-width: 900px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.25);
-    }
-    .register-info {
-      background: linear-gradient(160deg, #1a2980, #26d0ce);
-      color: #fff;
-      padding: 50px;
-    }
-    .register-info h1 { font-size: 32px; margin-bottom: 20px; }
-    .register-info p { line-height: 1.7; margin-bottom: 20px; font-size: 15px; }
-    .register-info ul { list-style: none; }
-    .register-info ul li { margin-bottom: 12px; font-size: 14px; }
-    .register-form { padding: 50px; }
-    .register-form h2 { margin-bottom: 25px; color: #203a43; font-size: 26px; }
-    .form-group { margin-bottom: 18px; }
-    .form-group label { display: block; font-size: 13px; margin-bottom: 6px; color: #444; }
-    .form-group input, .form-group select, .form-group textarea {
-      width: 100%; padding: 12px 14px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px;
-    }
-    .form-group textarea { resize: vertical; min-height: 90px; }
-    .register-btn {
-      margin-top: 10px; width: 100%; padding: 14px;
-      background: linear-gradient(135deg, #1a2980, #26d0ce);
-      border: none; border-radius: 6px; color: #fff; font-size: 15px; font-weight: 600; cursor: pointer; transition: 0.3s ease;
-    }
-    .register-btn:hover { opacity: 0.9; transform: translateY(-1px); }
-    .login-link { margin-top: 18px; font-size: 13px; text-align: center; }
-    .login-link a { color: #1a2980; text-decoration: none; font-weight: 500; }
-    @media(max-width: 768px) { .register-container { grid-template-columns: 1fr; } }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
+    body{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px}
+    .container{background:#fff;max-width:980px;width:100%;border-radius:14px;box-shadow:0 25px 60px rgba(0,0,0,.25);overflow:hidden;display:grid;grid-template-columns:1fr 1.2fr}
+    .info{background:linear-gradient(160deg,#1a2980,#26d0ce);color:#fff;padding:50px}
+    .info h1{font-size:32px;margin-bottom:15px}
+    .info p{font-size:15px;line-height:1.7;margin-bottom:20px}
+    .info ul{list-style:none}
+    .info li{margin-bottom:10px;font-size:14px}
+    .form{padding:50px}
+    .form h2{font-size:26px;margin-bottom:25px;color:#203a43}
+    .group{margin-bottom:16px}
+    label{font-size:13px;color:#444;margin-bottom:6px;display:block}
+    input,select,textarea{width:100%;padding:12px 14px;border-radius:6px;border:1px solid #ccc;font-size:14px}
+    textarea{resize:vertical;min-height:90px}
+    .payment-box{display:none;background:#f4f8fb;border-left:4px solid #1a2980;padding:12px;margin-top:10px;font-size:13px}
+    .btn{width:100%;padding:14px;margin-top:10px;background:linear-gradient(135deg,#1a2980,#26d0ce);border:none;border-radius:6px;color:#fff;font-size:15px;font-weight:600;cursor:pointer}
+    .btn:hover{opacity:.9}
+    .proof{margin-top:15px;text-align:center}
+    .proof a{color:#1a2980;font-weight:600;text-decoration:none}
+    @media(max-width:800px){.container{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <div class="register-container">
-    <div class="register-info">
-      <h1>Premium Academic Research Agency</h1>
-      <p>Register your research topic and academic details to receive professionally written Chapter One & Two tailored to Nigerian university standards.</p>
-      <ul>
-        <li>✔ Approved academic structure</li>
-        <li>✔ Nigerian university formatting</li>
-        <li>✔ Plagiarism-free content</li>
-        <li>✔ Fast delivery & expert reviewers</li>
-      </ul>
-    </div>
-    <div class="register-form">
-      <h2>Student / Researcher Registration</h2>
-      <form id="registerForm">
-        <div class="form-group">
-          <label for="fullname">Full Name</label>
-          <input id="fullname" type="text" placeholder="Enter your full name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input id="email" type="email" placeholder="Enter your email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input id="phone" type="tel" placeholder="e.g. 080xxxxxxxx" required>
-        </div>
-
-        <div class="form-group">
-          <label for="university">University</label>
-          <input id="university" type="text" placeholder="e.g. University of Ibadan" required>
-        </div>
-
-        <div class="form-group">
-          <label for="department">Department</label>
-          <input id="department" type="text" placeholder="e.g. Crop Science" required>
-        </div>
-
-        <div class="form-group">
-          <label for="level">Academic Level</label>
-          <select id="level" required>
-            <option value="">-- Select Level --</option>
-            <option>Undergraduate</option>
-            <option>Postgraduate (PGD/MSc)</option>
-            <option>PhD</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="service">Service Required</label>
-          <select id="service" required>
-            <option value="">-- Select Service --</option>
-            <option value="25000">Chapter One – ₦25,000</option>
-            <option value="30000">Chapter Two – ₦30,000</option>
-            <option value="50000">Chapters 1 & 2 – ₦50,000</option>
-            <option value="70000">Full Proposal – ₦70,000</option>
-            <option value="40000">Chapter 1 Urgent Pack– ₦40,000</option>
-            <option value="75000">Chapters 1 & 2 Urgent Pack– ₦75,000</option>
-            <option value="120000">Proposal Defense Urgent Pack – ₦120,000</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="paymentMethod">Payment Method</label>
-          <select id="paymentMethod" onchange="showPaymentDetails()" required>
-            <option value="">-- Select Payment Method --</option>
-            <option value="bank">Bank Transfer</option>
-            <option value="crypto">Crypto Payment</option>
-          </select>
-        </div>
-        <select id="paymentMethod" onchange="showPaymentDetails()" required>
-          <option value="">-- Select Payment Method --</option>
-          <option value="bank">Bank Transfer</option>
-          <option value="crypto">Crypto Payment</option>
-        </select>
-
-        <div id="bankDetails" style="display:none; margin-top:10px; font-size:13px; color:#333;">
-          <strong>Bank Transfer Details</strong><br><br>
-          <strong>Option 1:</strong><br>
-          Bank Name: GTBank<br>
-          Account Name: Olayinka Dare Emmanuel<br>
-          Account Number: 0117568704<br><br>
-          <strong>Option 2:</strong><br>
-          Bank Name: OPay<br>
-          Account Name: Olayinka Dare Emmanuel<br>
-          Account Number: 8148682660
-                </div>
-
-        <div id="cryptoDetails" style="display:none; margin-top:10px; font-size:13px; color:#333;">
-          <strong>Crypto Wallet (USDT – TRC20)</strong><br>
-          Address: TV16ot1GQ66URopqMFbaS4cg8BRbtQuy5H
-        </div>
-
-        <button type="submit" class="register-btn">Submit Registration</button>
-
-        <p style="margin-top:15px; font-size:13px; text-align:center;">
-          After payment, <a href="https://wa.me/2348148682660" target="_blank" style="color:#1a2980; font-weight:500;">click here to upload your payment proof on WhatsApp</a>
-        </p>
-      </form>
-    </div>
+<div class="container">
+  <div class="info">
+    <h1>Premium Academic Research Agency</h1>
+    <p>Register your research topic and academic details. All submissions are structured strictly to Nigerian university standards.</p>
+    <ul>
+      <li>✔ Topic refinement & approval guidance</li>
+      <li>✔ Chapter One & Two writing</li>
+      <li>✔ Plagiarism-free & referenced</li>
+      <li>✔ Fast turnaround time</li>
+    </ul>
   </div>
 
+  <div class="form">
+    <h2>Research Registration Form</h2>
+
+    <form id="regForm">
+      <div class="group"><label>Full Name</label><input id="name" placeholder="Your full name" required></div>
+      <div class="group"><label>Email Address</label><input id="email" type="email" placeholder="example@email.com" required></div>
+      <div class="group"><label>Phone Number</label><input id="phone" placeholder="080xxxxxxxx" required></div>
+      <div class="group"><label>University</label><input id="university" placeholder="e.g University of Ibadan" required></div>
+      <div class="group"><label>Department</label><input id="department" placeholder="e.g Crop Science" required></div>
+      <div class="group"><label>Programme Level</label>
+        <select id="level" required>
+          <option value="">-- Select Level --</option>
+          <option>Undergraduate</option>
+          <option>Postgraduate (PGD/MSc)</option>
+          <option>PhD</option>
+        </select>
+      </div>
+
+      <div class="group"><label>Proposed Research Topic</label><textarea id="topic" placeholder="Enter your research topic" required></textarea></div>
+      <div class="group"><label>Research Area / Keywords</label><input id="area" placeholder="e.g Education, Soil Fertility"></div>
+      <div class="group"><label>Brief Problem Statement (optional)</label><textarea id="problem" placeholder="Summarize the research problem"></textarea></div>
+
+      <div class="group"><label>Service Required</label>
+        <select id="service" required>
+          <option value="">-- Select Service --</option>
+          <option>Chapter One – ₦25,000</option>
+          <option>Chapter Two – ₦30,000</option>
+          <option>Chapters 1 & 2 – ₦50,000</option>
+          <option>Full Proposal – ₦70,000</option>
+          <option>Urgent Chapter 1 – ₦35,000</option>
+          <option>Urgent Chapter 2 – ₦40,000</option>
+          <option>Urgent Chapters 1 & 2 – ₦70,000</option>
+        </select>
+      </div>
+
+      <div class="group"><label>Payment Method</label>
+        <select id="payment" onchange="showPay()" required>
+          <option value="">-- Select Payment Method --</option>
+          <option value="bank">Bank Transfer</option>
+          <option value="crypto">Crypto (USDT)</option>
+        </select>
+      </div>
+
+      <div id="bank" class="payment-box">
+        <strong>Bank Transfer Details</strong><br><br>
+        <strong>GTBank</strong><br>Account Name: Olayinka Dare Emmanuel<br>Account Number: 0117568704<br><br>
+        <strong>OPay</strong><br>Account Name: Olayinka Dare Emmanuel<br>Account Number: 8148682660
+      </div>
+
+      <div id="crypto" class="payment-box">
+        <strong>USDT (TRC20)</strong><br>
+        Wallet Address: TV16ot1GQ66URopqMFbaS4cg8BRbtQuy5H
+      </div>
+
+      <button type="button" class="btn" onclick="sendWhatsApp()">Submit Registration</button>
+
+      <div class="proof">
+        <p>After payment, <a href="https://wa.me/2348148682660" target="_blank">upload your payment proof on WhatsApp</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+
 <script>
-function showPaymentDetails() {
-  const method = document.getElementById('paymentMethod').value;
-  document.getElementById('bankDetails').style.display = method === 'bank' ? 'block' : 'none';
-  document.getElementById('cryptoDetails').style.display = method === 'crypto' ? 'block' : 'none';
+function showPay(){
+  document.getElementById('bank').style.display='none';
+  document.getElementById('crypto').style.display='none';
+  const p=document.getElementById('payment').value;
+  if(p==='bank') document.getElementById('bank').style.display='block';
+  if(p==='crypto') document.getElementById('crypto').style.display='block';
+}
+
+function sendWhatsApp(){
+  const msg=`RESEARCH REGISTRATION%0A%0AFull Name: ${name.value}%0AEmail: ${email.value}%0APhone: ${phone.value}%0AUniversity: ${university.value}%0ADepartment: ${department.value}%0ALevel: ${level.value}%0A%0AResearch Topic:%0A${topic.value}%0A%0AResearch Area: ${area.value}%0A%0AProblem Statement:%0A${problem.value}%0A%0AService Required: ${service.value}%0APayment Method: ${payment.value}`;
+  window.open(`https://wa.me/2348148682660?text=${msg}`,'_blank');
 }
 </script>
 </body>
