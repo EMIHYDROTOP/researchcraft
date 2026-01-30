@@ -77,6 +77,44 @@
 
     footer{background:#000;color:#aaa;text-align:center;padding:25px}
 
+    /* Floating WhatsApp Button */
+    .whatsapp-float{
+      position:fixed;
+      bottom:25px;
+      right:25px;
+      background:#25D366;
+      color:#fff;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:30px;
+      text-decoration:none;
+      box-shadow:0 5px 15px rgba(0,0,0,.3);
+      z-index:999;
+      transition:all .3s ease;
+    }
+    .whatsapp-float:hover{
+      transform:scale(1.1);
+      box-shadow:0 8px 18px rgba(0,0,0,.35);
+    }
+
+    /* Service buttons for demo */
+    .service-btn{
+      display:inline-block;
+      margin:5px;
+      padding:12px 22px;
+      background:#0d47a1;
+      color:#fff;
+      border-radius:20px;
+      text-decoration:none;
+      cursor:pointer;
+      transition:all .3s ease;
+    }
+    .service-btn:hover{background:#1565c0}
+
     @media(max-width:900px){
       .hero{grid-template-columns:1fr;text-align:center}
       .btn-outline{display:inline-block;margin-top:15px}
@@ -101,19 +139,9 @@
 <section class="hero">
   <div>
     <h2>Professional Academic Writing And Research Support</h2>
-
-    <p>
-      We are a professional academic writing and research support platform dedicated to helping students, researchers and professionals achieve Academic excellence with confidence.
-    </p>
-
-    <p>
-      Our services support clients at every stage of their academic journey, from idea development to final submission, while maintaining originality, clarity and academic integrity. We work with undergraduate, postgraduate and PhD-level clients across diverse disciplines.
-    </p>
-
-    <a href="register.html" class="btn-primary">Register Your Research</a>
-    <a href="services.html" class="btn-outline">Explore Services</a>
+    <p>We are a professional academic writing and research support platform dedicated to helping students, researchers and professionals achieve Academic excellence with confidence.</p>
+    <p>Our services support clients at every stage of their academic journey, from idea development to final submission, while maintaining originality, clarity and academic integrity. We work with undergraduate, postgraduate and PhD-level clients across diverse disciplines.</p>
   </div>
-
   <div>
     <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f"
          style="width:100%;border-radius:22px"
@@ -122,25 +150,18 @@
 </section>
 
 <section>
-  <h2 style="text-align:center;color:#0d47a1;margin-bottom:40px">
-    Why Students & Researchers Choose ResearchCraft
-  </h2>
-
-  <div class="why">
-    <div class="why-card">
-      <h3>End-to-End Academic Support</h3>
-      <p>From topic refinement and proposal development to final submission support, we guide you through every academic stage.</p>
-    </div>
-
-    <div class="why-card">
-      <h3>Experienced Academic Writers</h3>
-      <p>Our team consists of discipline-specific writers and reviewers with postgraduate and PhD-level experience.</p>
-    </div>
-
-    <div class="why-card">
-      <h3>Original & Ethical Research</h3>
-      <p>All work is written from scratch, properly referenced, and aligned with academic and institutional standards.</p>
-    </div>
+  <h2 style="text-align:center;color:#0d47a1;margin-bottom:30px">Select a Service to Chat About</h2>
+  <div style="text-align:center;">
+    <a class="service-btn" data-service="Chapter One Writing">Chapter One Writing</a>
+    <a class="service-btn" data-service="Chapter Two (Literature Review)">Chapter Two (Literature Review)</a>
+    <a class="service-btn" data-service="Proposal Development">Proposal Development</a>
+    <a class="service-btn" data-service="Formatting and Referencing">Formatting and Referencing</a>
+    <a class="service-btn" data-service="Nigerian University Compliance">Nigerian University Compliance</a>
+    <a class="service-btn" data-service="Fast Track Delivery">Fast Track Delivery</a>
+    <a class="service-btn" data-service="Journal and Conference Support">Journal and Conference Support</a>
+    <a class="service-btn" data-service="Data Analysis and Methodology">Data Analysis and Methodology</a>
+    <a class="service-btn" data-service="Editing and Proofreading">Editing and Proofreading</a>
+    <a class="service-btn" data-service="Specialized Academic Support">Specialized Academic Support</a>
   </div>
 </section>
 
@@ -159,33 +180,35 @@
       <p>Clear academic tone, proper formatting and citations.</p>
     </div>
   </div>
-  <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/2348148682660" target="_blank" class="whatsapp-float">💬</a>
+</section>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/2348148682660" target="_blank" class="whatsapp-float" id="whatsappBtn">💬</a>
 
 <script>
-function showPay(){
-  document.getElementById('bank').style.display='none';
-  document.getElementById('crypto').style.display='none';
-  const p=document.getElementById('payment').value;
-  if(p==='bank') document.getElementById('bank').style.display='block';
-  if(p==='crypto') document.getElementById('crypto').style.display='block';
-}
+  let selectedService = '';
 
-function sendWhatsApp(){
-  const checkboxes = document.querySelectorAll('.checkbox-group-scroll input[type="checkbox"]:checked');
-  let selectedServices = [];
-  checkboxes.forEach(cb=>selectedServices.push(cb.value));
-  const servicesText = selectedServices.length>0 ? selectedServices.join(', ') : 'No service selected';
-  
-  const msg=`RESEARCH REGISTRATION%0A%0AFull Name: ${name.value}%0AEmail: ${email.value}%0APhone: ${phone.value}%0AUniversity: ${university.value}%0ADepartment: ${department.value}%0ALevel: ${level.value}%0A%0AResearch Topic:%0A${topic.value}%0A%0AResearch Area: ${area.value}%0A%0AProblem Statement:%0A${problem.value}%0A%0AService Required: ${servicesText}%0APayment Method: ${payment.value}`;
-  
-  window.open(`https://wa.me/2348148682660?text=${msg}`,'_blank');
-}
+  // Update WhatsApp message when a service button is clicked
+  const serviceButtons = document.querySelectorAll('.service-btn');
+  serviceButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      selectedService = btn.getAttribute('data-service');
+      alert(`Service selected: ${selectedService}.\nClick the WhatsApp button to chat.`);
+    });
+  });
+
+  // Update WhatsApp button link dynamically
+  const waButton = document.getElementById('whatsappBtn');
+  waButton.addEventListener('click', e => {
+    e.preventDefault();
+    let msg = `Hello, I would like to inquire about the following service: ${selectedService || 'No service selected'}`;
+    window.open(`https://wa.me/2348148682660?text=${encodeURIComponent(msg)}`, '_blank');
+  });
 </script>
-</section>
 
 <footer>
   © 2026 ResearchCraft Academic Services. All rights reserved.
 </footer>
+
 </body>
 </html>
