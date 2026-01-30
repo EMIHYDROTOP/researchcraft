@@ -73,6 +73,30 @@ section{max-width:1200px;margin:auto;padding:45px 20px}
 }
 .btn:hover{background:#1ebe5d}
 
+/* Floating WhatsApp Icon */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:36px;
+  text-decoration:none;
+  box-shadow:0 5px 15px rgba(0,0,0,.3);
+  z-index:999;
+  transition:all .3s ease;
+}
+.whatsapp-float:hover{
+  transform:scale(1.15);
+  box-shadow:0 8px 18px rgba(0,0,0,.35);
+}
+
 /* Footer */
 footer{background:#000;color:#aaa;text-align:center;padding:25px;font-size:.85rem}
 </style>
@@ -265,6 +289,9 @@ href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20need%20prici
 
 </div>
 </section>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/2348148682660" target="_blank" class="whatsapp-float">💬</a>
 
 <footer>
 © 2026 ResearchCraft Academic Services
