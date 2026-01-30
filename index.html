@@ -164,6 +164,28 @@
 <footer>
   © 2026 ResearchCraft Academic Services. All rights reserved.
 </footer>
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/2348148682660" target="_blank" class="whatsapp-float">💬</a>
 
+<script>
+function showPay(){
+  document.getElementById('bank').style.display='none';
+  document.getElementById('crypto').style.display='none';
+  const p=document.getElementById('payment').value;
+  if(p==='bank') document.getElementById('bank').style.display='block';
+  if(p==='crypto') document.getElementById('crypto').style.display='block';
+}
+
+function sendWhatsApp(){
+  const checkboxes = document.querySelectorAll('.checkbox-group-scroll input[type="checkbox"]:checked');
+  let selectedServices = [];
+  checkboxes.forEach(cb=>selectedServices.push(cb.value));
+  const servicesText = selectedServices.length>0 ? selectedServices.join(', ') : 'No service selected';
+  
+  const msg=`RESEARCH REGISTRATION%0A%0AFull Name: ${name.value}%0AEmail: ${email.value}%0APhone: ${phone.value}%0AUniversity: ${university.value}%0ADepartment: ${department.value}%0ALevel: ${level.value}%0A%0AResearch Topic:%0A${topic.value}%0A%0AResearch Area: ${area.value}%0A%0AProblem Statement:%0A${problem.value}%0A%0AService Required: ${servicesText}%0APayment Method: ${payment.value}`;
+  
+  window.open(`https://wa.me/2348148682660?text=${msg}`,'_blank');
+}
+</script>
 </body>
 </html>
