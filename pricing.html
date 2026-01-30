@@ -1,183 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pricing | ResearchCraft</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-    body{background:#f4f7fb;color:#222}
-    header{background:linear-gradient(135deg,#0d47a1,#1565c0);padding:18px 0}
-    nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px}
-    nav h1{color:#fff;font-size:1.5rem}
-    nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:500}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing | ResearchCraft</title>
 
-    .page-hero{text-align:center;padding:60px 20px}
-    .page-hero h2{font-size:2.4rem;color:#0d47a1;margin-bottom:10px}
-    .page-hero p{max-width:720px;margin:auto}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    section{max-width:1200px;margin:auto;padding:55px 20px}
-    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#f4f7fb;color:#222}
 
-    .price-card{
-      background:#fff;
-      padding:30px;
-      border-radius:20px;
-      box-shadow:0 15px 35px rgba(0,0,0,.08);
-      text-align:center
-    }
-    .price-card h3{color:#0d47a1;margin-bottom:10px}
-    .price-card ul{list-style:none;margin:18px 0}
-    .price-card li{margin-bottom:7px;font-size:.95rem}
+/* Header */
+header{background:linear-gradient(135deg,#0d47a1,#1565c0);padding:18px 0}
+nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px}
+nav h1{color:#fff;font-size:1.5rem}
+nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:500}
 
-    .btn{
-      display:inline-block;
-      background:#f9a825;
-      color:#000;
-      padding:12px 28px;
-      border-radius:30px;
-      text-decoration:none;
-      font-weight:600;
-      transition:.3s ease;
-    }
-    .btn:hover{transform:translateY(-2px)}
+/* Hero */
+.page-hero{text-align:center;padding:55px 20px}
+.page-hero h2{font-size:2.4rem;color:#0d47a1}
+.page-hero p{max-width:760px;margin:10px auto 0;font-size:.95rem}
 
-    footer{background:#000;color:#aaa;text-align:center;padding:25px}
-  </style>
+/* Section */
+section{max-width:1200px;margin:auto;padding:45px 20px}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title h3{font-size:1.8rem;color:#0d47a1}
+.section-title p{font-size:.95rem;color:#555}
+
+/* Cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+
+.card{
+  background:#fff;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  position:relative;
+  transition:.3s ease;
+}
+.card:hover{transform:translateY(-6px)}
+
+.ribbon{
+  position:absolute;
+  top:15px;
+  right:-40px;
+  background:#f9a825;
+  color:#000;
+  padding:5px 45px;
+  font-size:.7rem;
+  font-weight:600;
+  transform:rotate(45deg);
+}
+
+.card h4{color:#0d47a1;margin-bottom:10px}
+.card ul{list-style:none;font-size:.9rem;margin:10px 0 18px}
+.card li{margin-bottom:6px}
+
+/* WhatsApp Button */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#25D366;
+  color:#fff;
+  padding:12px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:.9rem;
+  transition:.3s ease;
+}
+.btn:hover{background:#1ebe5d}
+
+/* Footer */
+footer{background:#000;color:#aaa;text-align:center;padding:25px;font-size:.85rem}
+</style>
 </head>
+
 <body>
 
 <header>
-  <nav>
-    <h1>ResearchCraft</h1>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="register.html">Register</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
+<nav>
+<h1>ResearchCraft</h1>
+<div>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="pricing.html">Pricing</a>
+<a href="register.html">Register</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
 </header>
 
 <div class="page-hero">
-  <h2>Flexible Pricing</h2>
-  <p>Our prices depend on your topic, level, deadline and university requirements. Click below to get an instant quote on WhatsApp.</p>
+<h2>Request a Quote</h2>
+<p>Pricing depends on your academic level, topic complexity, deadline and university requirements. Click any service to chat with us instantly on WhatsApp.</p>
 </div>
 
+<!-- Academic Writing -->
 <section>
-  <div class="pricing-grid">
+<div class="section-title">
+<h3>Academic Writing and Research</h3>
+<p>Professional writing across all disciplines</p>
+</div>
 
-    <div class="price-card">
-      <h3>Chapter One Writing</h3>
-      <ul>
-        <li>Background of study</li>
-        <li>Problem statement</li>
-        <li>Objectives and research questions</li>
-        <li>University-compliant format</li>
-      </ul>
-      <a class="btn" target="_blank"
-        href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20want%20to%20get%20the%20price%20for%20Chapter%20One%20writing.">
-        Get Price
-      </a>
-    </div>
+<div class="grid">
 
-    <div class="price-card">
-      <h3>Chapter Two (Literature Review)</h3>
-      <ul>
-        <li>Conceptual and theoretical review</li>
-        <li>Empirical studies</li>
-        <li>Research gaps</li>
-        <li>Proper referencing</li>
-      </ul>
-      <a class="btn" target="_blank"
-        href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20want%20to%20get%20the%20price%20for%20Chapter%20Two%20writing.">
-        Get Price
-      </a>
-    </div>
+<div class="card">
+<span class="ribbon">Popular</span>
+<h4>Research Proposals</h4>
+<ul>
+<li>Topic refinement</li>
+<li>Problem alignment</li>
+<li>Supervisor-ready format</li>
+</ul>
+<a class="btn" target="_blank"
+href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20want%20to%20get%20the%20price%20for%20research%20proposal%20writing.">
+📲 Get Price
+</a>
+</div>
 
-    <div class="price-card">
-      <h3>Chapter One and Two</h3>
-      <ul>
-        <li>Complete research foundation</li>
-        <li>Discounted bundle</li>
-        <li>Supervisor-ready delivery</li>
-        <li>Priority support</li>
-      </ul>
-      <a class="btn" target="_blank"
-        href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20want%20to%20get%20the%20price%20for%20Chapter%20One%20and%20Two.">
-        Get Price
-      </a>
-    </div>
+<div class="card">
+<h4>Essays and Coursework</h4>
+<ul>
+<li>Argumentative essays</li>
+<li>Descriptive and narrative essays</li>
+<li>Assignments and take-home exams</li>
+</ul>
+<a class="btn" target="_blank"
+href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20need%20pricing%20for%20essay%20or%20coursework%20writing.">
+📲 Get Price
+</a>
+</div>
 
-    <div class="price-card">
-      <h3>Proposal Writing</h3>
-      <ul>
-        <li>Topic refinement</li>
-        <li>Problem alignment</li>
-        <li>Supervisor-ready proposal</li>
-        <li>Fast turnaround</li>
-      </ul>
-      <a class="btn" target="_blank"
-        href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20want%20to%20get%20the%20price%20for%20proposal%20writing.">
-        Get Price
-      </a>
-    </div>
+<div class="card">
+<h4>Seminar Papers and Case Studies</h4>
+<ul>
+<li>Research-based seminars</li>
+<li>Case study analysis</li>
+<li>Project reports</li>
+</ul>
+<a class="btn" target="_blank"
+href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20want%20pricing%20for%20seminar%20paper%20or%20case%20study.">
+📲 Get Price
+</a>
+</div>
 
-  </div>
+</div>
 </section>
 
+<!-- Theses -->
 <section>
-  <div class="pricing-grid">
+<div class="section-title">
+<h3>Theses and Dissertations</h3>
+<p>From topic selection to final submission</p>
+</div>
 
-    <div class="price-card">
-      <h3>Urgent Chapter One</h3>
-      <ul>
-        <li>Fast delivery</li>
-        <li>Well-cited (APA)</li>
-        <li>Turnitin-ready</li>
-        <li>Supervisor revisions</li>
-      </ul>
-      <a class="btn" target="_blank"
-        href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20need%20urgent%20Chapter%20One%20writing.%20Please%20send%20the%20price.">
-        Get Price
-      </a>
-    </div>
+<div class="grid">
 
-    <div class="price-card">
-      <h3>Urgent Chapter One and Two</h3>
-      <ul>
-        <li>Literature review included</li>
-        <li>Updated citations</li>
-        <li>Priority handling</li>
-        <li>Quick revisions</li>
-      </ul>
-      <a class="btn" target="_blank"
-        href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20need%20urgent%20Chapter%20One%20and%20Two.%20Please%20send%20the%20price.">
-        Get Price
-      </a>
-    </div>
+<div class="card">
+<span class="ribbon">Best Value</span>
+<h4>Chapter Writing Support</h4>
+<ul>
+<li>Chapter One to Five</li>
+<li>Step-by-step delivery</li>
+<li>Revisions included</li>
+</ul>
+<a class="btn" target="_blank"
+href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20want%20pricing%20for%20chapter-by-chapter%20thesis%20support.">
+📲 Get Price
+</a>
+</div>
 
-    <div class="price-card">
-      <h3>Urgent Full Proposal Pack</h3>
-      <ul>
-        <li>Chapter One and Two</li>
-        <li>Defense-ready</li>
-        <li>Fast-track delivery</li>
-        <li>Multiple revisions</li>
-      </ul>
-      <a class="btn" target="_blank"
-        href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20need%20an%20urgent%20full%20proposal.%20Please%20send%20the%20price.">
-        Get Price
-      </a>
-    </div>
+<div class="card">
+<h4>Full Thesis or Dissertation</h4>
+<ul>
+<li>Undergraduate to PhD</li>
+<li>Original research</li>
+<li>Defense-ready work</li>
+</ul>
+<a class="btn" target="_blank"
+href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20need%20pricing%20for%20full%20thesis%20or%20dissertation%20writing.">
+📲 Get Price
+</a>
+</div>
 
-  </div>
+</div>
+</section>
+
+<!-- Data Analysis -->
+<section>
+<div class="section-title">
+<h3>Data Analysis and Methodology</h3>
+<p>Quantitative and qualitative research support</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h4>Statistical Analysis</h4>
+<ul>
+<li>SPSS, R, Excel, Python</li>
+<li>ANOVA, regression, correlation</li>
+<li>Interpretation and charts</li>
+</ul>
+<a class="btn" target="_blank"
+href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20want%20pricing%20for%20statistical%20data%20analysis.">
+📲 Get Price
+</a>
+</div>
+
+<div class="card">
+<h4>Qualitative Analysis</h4>
+<ul>
+<li>Thematic analysis</li>
+<li>Content analysis</li>
+<li>Result discussion</li>
+</ul>
+<a class="btn" target="_blank"
+href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20need%20pricing%20for%20qualitative%20data%20analysis.">
+📲 Get Price
+</a>
+</div>
+
+</div>
+</section>
+
+<!-- Editing -->
+<section>
+<div class="section-title">
+<h3>Editing, Referencing and Journals</h3>
+<p>Polish your work to international standards</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h4>Editing and Proofreading</h4>
+<ul>
+<li>Grammar and clarity</li>
+<li>Academic tone</li>
+<li>Structural consistency</li>
+</ul>
+<a class="btn" target="_blank"
+href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20want%20pricing%20for%20editing%20and%20proofreading.">
+📲 Get Price
+</a>
+</div>
+
+<div class="card">
+<span class="ribbon">Advanced</span>
+<h4>Journal and Conference Support</h4>
+<ul>
+<li>Journal article writing</li>
+<li>Plagiarism reduction</li>
+<li>Response to reviewers</li>
+</ul>
+<a class="btn" target="_blank"
+href="https://wa.me/2348148682660?text=Hello%20ResearchCraft,%20I%20need%20pricing%20for%20journal%20or%20conference%20support.">
+📲 Get Price
+</a>
+</div>
+
+</div>
 </section>
 
 <footer>
-  © 2026 ResearchCraft Academic Services
+© 2026 ResearchCraft Academic Services
 </footer>
 
 </body>
